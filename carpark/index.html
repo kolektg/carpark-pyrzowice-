@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>My Website</title>
+    <link rel="stylesheet" href="style1.css"/>
+    <link rel="icon" href="images/logo.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="body_container">
+            <div class="header_container">
+                <div class="logo_section">
+                    <a href="index.html"><img class="logo flex" src="images/logo.png" alt=""></a>
+                    
+                    <label id="menu_toggle" for="menu-toggle flex" class="menu-icon">&#9776;</label>
+                    <a href="tel:+48509476136" class="call_logo"><p class="call_logo flex"> <b>ZADZWOŃ</b> | TEL 509-476-136</p></a>
+                </div>
+                <nav class="menu" id="menu">
+                    <div class="x-container" id="close_icon">
+                        <div class="x-line"></div>
+                        <div class="x-line"></div>
+                      </div>
+                      
+                    <ul>
+                        <li><a class="active" href="index.html">O NAS</a></li>
+                        <li><a href="reservations.html">REZERWACJE</a></li>
+                        <li><a href="gallery.html">GALERIA</a></li>
+                        <li><a href="prices.html">CENNIK</a></li>
+                        <li><a href="index.html#contact" id="contact-close">KONTAKT</a></li>
+                    </ul>
+                </nav>
+            </div>    
+    </header>
+    
+
+        <section class="main_container">
+            <div class="main_heading_container">
+                <h1>Parking Car Park</h1>
+                <p>PROFESJONALNY PARKING TYLKO 0.8KM OD LOTNISKA</p>
+            </div>
+        </section>
+
+        <section class="reservation">
+            <div>
+                <h1>Rezerwacja telefoniczna</h1>
+                <p>Preferujesz rezerwację przez telefon? Skontaktuj się z nami, a zarezerwujemy dla Ciebie termin!</p>
+                <a href="tel:+48790873120" class="icon_main1">Zadzwoń!</a>
+            </div>
+            <div>
+                <h1>Rezerwacja online</h1>
+                <p>Chcesz zarezerwować online? Skorzystaj z naszej wygodnej opcji rezerwacji przez internet!</p>
+                <a href="reservations.html" class="icon_main">Zarezerwuj!</a>
+            </div>
+        </section>
+
+        <section class="about_us">
+            <h1 class="about_us_header">Dlaczego my?</h1>
+            <ul>
+                <li>transfer na i z lotniska GRATIS</li>
+                <li>miła profesjonalna obsługa</li>
+                <li>utwardzony, przestronny i oświetlony parking</li>
+                <li>gwarancja bezpieczeństwa - parking monitorowany</li>
+            </ul>
+            <p>Parking jest dostępny całodobowo, 7 dni w tygodniu. Oferujemy Państwu tanie miejsca parkingowe dla samochodów osobowych oraz dostawczych oraz bezpłatny transfer do i z lotniska.
+                Parking znajduje się na prywatnej posesji w sąsiedztwie pozostałych domostw co w dodatkowy sposób poprawia bezpieczeństwo Państwa samochodu.
+                W razie jakichkolwiek problemów z samochodem gwarantujemy pomoc bez dodatkowych opłat.</p>
+        </section>
+        <div class="footer_photo">
+            <img src="images/gallery9.jpg" alt="">
+        </div>
+        <footer>
+            <div class="footer_container" id="contact">
+                <h1>Kontakt</h1>
+                <h3>NIE CZEKAJ, ZAREZERWUJ SWOJE MIEJSCE JUŻ DZIŚ</h3>
+                <ul class="footer_flex">
+                    <li>
+                        <a href="mailto:carpark@onet.pl">
+                            <img src="images/email.png" alt="">
+                            <p>carpark@onet.pl</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://g.co/kgs/QLN45W9" target="_blank">
+                            <img src="images/pin.png" alt="">
+                            <p>ul. Wolności 54, Pyrzowice</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="tel:+48509476136">
+                            <img src="images/phone-call.png" alt="">
+                            <p>Tel: 509-476-136</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="tel:+48537266290">
+                            <img src="images/phone-call.png" alt="">
+                            <p>Tel: 537-266-290</p>
+                        </a>
+                    </li>
+                </ul>
+
+                <div id="map"></div>
+
+                <div class="social_media">
+                    <a href="https://g.co/kgs/QLN45W9" target="_blank">
+                        <img src="images/google.png" alt="">
+                    </a>
+                   
+                    
+                </div>
+            </div>
+        </footer>
+    </div>    
+</body>
+<script>
+    // Initialize and add the map
+    function initMap() {
+        // Coordinates of the location
+        var location = { lat: 50.4620361328125, lng: 19.07140350341797 };
+
+        // Create a new map centered at the location
+        var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 15,
+            center: location
+        });
+
+        // Create a marker at the location
+        var marker = new google.maps.Marker({
+            position: location,
+            map: map,
+            title: 'Marker Title'
+        });
+    }
+
+    // menu toggle 
+
+    document.addEventListener('DOMContentLoaded', function() {
+  const menuToggle = document.getElementById('menu_toggle');
+  const closeIcon = document.getElementById('close_icon');
+  const nav = document.querySelector('nav');
+  const contact = document.getElementById('contact-close')
+
+        
+  menuToggle.addEventListener('click', function() {
+    // Add the class to show the menu with a slight delay for smooth transition
+    setTimeout(function() {
+      nav.classList.add('slide');
+      document.body.style.overflow = 'hidden';
+    }, 10);
+  });
+
+  closeIcon.addEventListener('click', function() {
+    // Remove the class to hide the menu
+    nav.classList.remove('slide');
+    document.body.style.overflow = '';
+  });
+  contact.addEventListener('click', function() {
+    // Remove the class to hide the menu
+    nav.classList.remove('slide');
+    document.body.style.overflow = '';
+  });
+});
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA9e11uOOg60qT-xiGIYg8Pv0roY5BXNFQ&callback=initMap" async defer></script>
+
+</html>

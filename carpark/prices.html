@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>My Website</title>
+    <link rel="stylesheet" href="style1.css"/>
+    <link rel="icon" href="images/logo.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="lightbox.css">
+</head>
+<body>
+    <header>
+        <div class="body_container">
+            <div class="header_container">
+                <div class="logo_section">
+                    <a href="index.html"><img class="logo flex" src="images/logo.png" alt=""></a>
+                    
+                    <label id="menu_toggle" for="menu-toggle flex" class="menu-icon">&#9776;</label>
+                    <a href="tel:+48509476136" class="call_logo"><p class="call_logo flex"> <b>ZADZWOŃ</b> | TEL 509-476-136</p></a>
+                </div>
+                <nav class="menu" id="menu">
+                    <div class="x-container" id="close_icon">
+                        <div class="x-line"></div>
+                        <div class="x-line"></div>
+                      </div>
+                      
+                    <ul>
+                        <li><a href="index.html">O NAS</a></li>
+                        <li><a href="reservations.html">REZERWACJE</a></li>
+                        <li><a href="gallery.html">GALERIA</a></li>
+                        <li><a class="active" href="prices.html">CENNIK</a></li>
+                        <li><a href="index.html#contact" id="contact-close">KONTAKT</a></li>
+                    </ul>
+                </nav>
+            </div>    
+    </header>
+    
+    <section class="prices_main">
+        <div class="prices">
+            <table>
+                <tr class="rows">
+                    <th>Ilość dni</th>
+                    <th>Cena od 1.10 do 30.04</th>
+                    <th>Cena od 1.05 do 30.09</th>
+                </tr>
+                <tr class="rows">
+                    <td>1</td>
+                    <td>70 PLN</td>
+                    <td>80 PLN</td>
+                </tr>
+                <tr class="rows">
+                    <td>2</td>
+                    <td>80 PLN</td>
+                    <td>90 PLN</td>
+                </tr>
+                <tr class="rows">
+                    <td>3</td>
+                    <td>90 PLN</td>
+                    <td>100 PLN</td>
+                </tr>
+                <tr class="rows">
+                    <td>4</td>
+                    <td>100 PLN</td>
+                    <td>110 PLN</td>
+                </tr>
+                <tr class="rows">
+                    <td>5</td>
+                    <td>110 PLN</td>
+                    <td>120 PLN</td>
+                </tr>
+                <tr class="rows">
+                    <td>6</td>
+                    <td>120 PLN</td>
+                    <td>130 PLN</td>
+                </tr>
+                <tr class="rows days7">
+                    <td>7</td>
+                    <td>140 PLN</td>
+                    <td>150 PLN</td>
+                </tr>
+                <tr class="rows">
+                    <td>8</td>
+                    <td>140 PLN</td>
+                    <td>150 PLN</td>
+                </tr>
+                <tr class="rows">
+                    <td>9</td>
+                    <td>150 PLN</td>
+                    <td>160 PLN</td>
+                </tr>
+                <tr class="rows">
+                    <td>10</td>
+                    <td>160 PLN</td>
+                    <td>170 PLN</td>
+                </tr>
+                <tr class="rows">
+                    <td>11</td>
+                    <td>170 PLN</td>
+                    <td>180 PLN</td>
+                </tr>
+                <tr class="rows">
+                    <td>12</td>
+                    <td>180 PLN</td>
+                    <td>190 PLN</td>
+                </tr>
+                <tr class="rows">
+                    <td>13</td>
+                    <td>190 PLN</td>
+                    <td>200 PLN</td>
+                </tr>
+                <tr class="rows days14">
+                    <td>14</td>
+                    <td>220 PLN</td>
+                    <td>240 PLN</td>
+                </tr>
+            </table>
+        </div>
+    </section>
+    <footer>
+        <div class="footer_container" id="contact">
+            <h1>Kontakt</h1>
+            <h3>NIE CZEKAJ, ZAREZERWUJ SWOJE MIEJSCE JUŻ DZIŚ</h3>
+            <ul class="footer_flex">
+                <li>
+                    <a href="mailto:carpark@onet.pl">
+                        <img src="images/email.png" alt="">
+                        <p>carpark@onet.pl</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://g.co/kgs/QLN45W9" target="_blank">
+                        <img src="images/pin.png" alt="">
+                        <p>ul. Wolności 54, Pyrzowice</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="tel:+48509476136">
+                        <img src="images/phone-call.png" alt="">
+                        <p>Tel: 509-476-136</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="tel:+48537266290">
+                        <img src="images/phone-call.png" alt="">
+                        <p>Tel: 537-266-290</p>
+                    </a>
+                </li>
+            </ul>
+
+            <div id="map"></div>
+
+            <div class="social_media">
+                <a href="https://g.co/kgs/QLN45W9" target="_blank">
+                    <img src="images/google.png" alt="">
+                </a>
+               
+                
+            </div>
+        </div>
+    </footer>
+
+
+
+    <script>
+        // Initialize and add the map
+        function initMap() {
+            // Coordinates of the location
+            var location = { lat: 50.4620361328125, lng: 19.07140350341797 };
+    
+            // Create a new map centered at the location
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 15,
+                center: location
+            });
+    
+            // Create a marker at the location
+            var marker = new google.maps.Marker({
+                position: location,
+                map: map,
+                title: 'Marker Title'
+            });
+        }
+    
+        // menu toggle 
+    
+        document.addEventListener('DOMContentLoaded', function() {
+      const menuToggle = document.getElementById('menu_toggle');
+      const closeIcon = document.getElementById('close_icon');
+      const nav = document.querySelector('nav');
+            
+      menuToggle.addEventListener('click', function() {
+        // Add the class to show the menu with a slight delay for smooth transition
+        setTimeout(function() {
+          nav.classList.add('slide');
+          document.body.style.overflow = 'hidden';
+        }, 10);
+      });
+    
+      closeIcon.addEventListener('click', function() {
+        // Remove the class to hide the menu
+        nav.classList.remove('slide');
+        document.body.style.overflow = '';
+      });
+    });
+   
+    
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA9e11uOOg60qT-xiGIYg8Pv0roY5BXNFQ&callback=initMap" async defer></script>
+    <script src="lightbox-plus-jquery.min.js"></script>
+</body>
+
+
